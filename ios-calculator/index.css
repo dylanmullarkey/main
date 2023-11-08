@@ -1,0 +1,47 @@
+body {
+  background-color: black;
+}
+button {
+  height: 80px;
+  line-height: 80px;
+  width: 80px;
+  font-size: 2em;
+  font-weight: bold;
+  border-radius: 50%;
+  text-align: center;
+  cursor: pointer;
+}
+
+.container {
+  /* background-color: white; */
+  width: 20%;
+}
+.total {
+  color: white;
+  font-size: 4em;
+  text-align: right;
+}
+.large-dark-btn {
+  /* padding: 50px; */
+  width: 160px;
+  border-radius: 55%;
+  background-color: #464950;
+  color: white;
+  border-color: #464950;
+}
+.dark-btn {
+  background-color: #464950;
+  color: white;
+  border-color: #464950;
+}
+
+.grey-btn {
+  background-color: #afadac;
+  color: black;
+}
+
+.orange-btn {
+  background-color: #e87a06;
+  color: white;
+  border-color: #e87a06;
+}
