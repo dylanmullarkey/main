@@ -1,29 +1,35 @@
 body {
   background-color: black;
+  margin: 0;
 }
-button {
+button,
+span {
   height: 80px;
   line-height: 80px;
   width: 80px;
   font-size: 2em;
   font-weight: bold;
-  border-radius: 50%;
+  border-radius: 50px;
   text-align: center;
   cursor: pointer;
 }
 
+.row {
+  width: 100%;
+}
 .container {
+  width: 400px;
   /* background-color: white; */
-  width: 20%;
 }
 .total {
   color: white;
   font-size: 4em;
-  text-align: right;
+  text-align: left;
+  width: 100%;
 }
 .large-dark-btn {
   /* padding: 50px; */
-  width: 160px;
+  width: 10vw;
   border-radius: 55%;
   background-color: #464950;
   color: white;
