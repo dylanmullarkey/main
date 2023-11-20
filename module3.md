@@ -20,12 +20,12 @@ else{
 
 # QuerySelector
 ```
-let sumEl = document.querySelector("CSS Selector")
+let newName = document.querySelector("CSS Selector")
 
 Examples:
-let sumEl = document.querySelector("body") // selects body element
-let sumEl = document.querySelector(".sum-el") // selects element with class sum-el
-let sumEl = document.querySelector("#sum-el") // selects element with id sum-el
+let newName = document.querySelector("body") // selects body element
+let newName = document.querySelector(".sum-el") // selects element with class sum-el
+let newName = document.querySelector("#sum-el") // selects element with id sum-el
 ```
 
 # Array
@@ -41,6 +41,18 @@ array.pop() //removes last value
 console.log(array) // []
 ```
 
+### Shift / Unshift
+```
+let array = ["Tuvalu","India","USA","Indonesia","Monaco"]
+
+array.shift() // removes first value, Tuvalu
+array.unshift("China") // appends China to front
+
+array.pop() // removes last value, Monaco
+array.push("Pakistan") // appends Pakistan to back
+
+console.log(array) // ["China", "India", "USA", "Indonesia", "Pakistan"]
+```
 # For Loops
 
 ```
@@ -69,4 +81,23 @@ if (hasCompletedCourse === true || givesCertificate === true) {
 if (!(hasCompletedCourse && givesCertificate)) {
 generateCertificate()
 }
+```
+
+# Objects
+
+Composite / complex data type
+```
+let player = {
+    ///initilize
+
+<!-- KEY   VALUE -->
+    name: "Per",
+    chips: 145
+}
+      <!-- dot-notation -->
+console.log(player.name) // Per
+console.log(player.chips) // 145
+
+        <!-- bracket notation -->
+console.log(player["name"]) // Per
 ```
