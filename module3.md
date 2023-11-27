@@ -165,3 +165,76 @@ inputBtn.addEventListener("click", function() {
     myLeads.push(inputEl.value)
 })
 ```
+
+# InnerHTML / createElement
+
+How to insert HTML using JavsScript
+
+### Here are the variables we work with
+
+```
+let myLeads = ["www.awesomelead.com", "www.epiclead.com", "www.greatlead.com"]
+const ulEl = document.getElementById("ul-el")
+```
+
+### InnerHTML
+
+ulEL is an unordered list. Using innerHTML, we insert a list item from the array. This line injects HTML into the DOM.
+
+```
+ulEl.innerHTML += "<li>" + myLeads[i] + "</li>"
+```
+
+### document.createElement()
+
+First, we create a variable which stores the li element. Next, we append the text we want to the element using li.textContent. Finally, we append the new list item to our unordered list.
+
+```
+const li = document.createElement("li")
+li.textContent = myLeads[i]
+ulEl.append(li)
+```
+
+### "DOM Manipulation comes with a cost"
+
+Better to run innerHTMl once rather than several tiems within a for loop. For example:
+
+```
+let listItems = ""
+for (let i = 0; i < myLeads.length; i++) {
+    listItems += "<li>" + myLeads[i] + "</li>"
+}
+ulEl.innerHTML = listItems
+```
+
+Doing it this way, rather than the first example code (which was inside a for loop), saves time. This code has to run innerHTML once, when the former does 3 times.
+
+# Template Strings / Literals
+
+Use `` backticks
+
+Instead of this
+
+```
+listItems += "<li><a target='_blank' href='" + myLeads[i] + "'>" + myLeads[i] + "</a></li>"
+```
+
+We can use template strings...
+
+```
+`<li><a target='_blank' href='${myLeads[i]}'>${myLeads[i]}</a></li>`
+```
+
+You can break it onto different lines!
+
+```
+`
+<li>
+    <a target='_blank' href='${myLeads[i]}'>
+        ${myLeads[i]}
+    </a>
+</li>
+`
+```
+
+### ${ } to use variables inside string. Inside template strings, there is no + for concatenation, or quotes. Unless you are inserting HTML or instances where quotes are needed outside of displaying a string.
