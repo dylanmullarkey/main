@@ -238,3 +238,60 @@ You can break it onto different lines!
 ```
 
 ### ${ } to use variables inside string. Inside template strings, there is no + for concatenation, or quotes. Unless you are inserting HTML or instances where quotes are needed outside of displaying a string.
+
+# CSS Specificity
+Sometimes we don't want to affect all elements when using a general selector. We can create more specific selectors in this case.
+```
+li a {
+    color: #5f9341;
+}
+```
+This selects links only inside a list-item.
+
+# LocalStorage -- Working with JSON and Arrays
+LocalStorage only works with strings, so we need to convert our array.
+```
+let myLeads = `["www.awesomelead.com"]`
+
+// 1. Turn the myLeads string into an array
+myLeads = JSON.parse(myLeads)
+// 2. Push a new value to the array
+myLeads.push("www.lead2.com")
+// 3. Turn the array into a string again
+myLeads = JSON.stringify(myLeads)
+// 4. Console.log the string using typeof to verify that it's a string
+console.log(typeof myLeads)
+
+//string
+```
+
+# Truthy / Falsy Values
+These values are false. 
+```
+// false
+// 0
+// ""
+// null -> how you as a developer signalize emptiness
+// undefined -> how JavaScript signalizes emptiness
+// NaN
+```
+Developers set values to null to signify emptyness. JS will return these values as undefinied. 
+
+Arrays will return true, even if empty. 
+
+# Function Parameters & Arguments
+Pass a value through a function, allows for reuseability vs. hard coding values. To add more than one, use commas
+```
+const names = ["Dylan", "Karl", "Briana"]
+const age = 20
+<!--             Parameters -->
+function render(param1, param2){
+    console.log(param1)
+    console.log(param2)
+}
+<!--    Arguments -->
+render(names, age)
+// ["Dylan", "Karl", "Briana"]
+// 20
+```
+
