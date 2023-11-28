@@ -240,16 +240,21 @@ You can break it onto different lines!
 ### ${ } to use variables inside string. Inside template strings, there is no + for concatenation, or quotes. Unless you are inserting HTML or instances where quotes are needed outside of displaying a string.
 
 # CSS Specificity
+
 Sometimes we don't want to affect all elements when using a general selector. We can create more specific selectors in this case.
+
 ```
 li a {
     color: #5f9341;
 }
 ```
+
 This selects links only inside a list-item.
 
 # LocalStorage -- Working with JSON and Arrays
+
 LocalStorage only works with strings, so we need to convert our array.
+
 ```
 let myLeads = `["www.awesomelead.com"]`
 
@@ -263,10 +268,14 @@ myLeads = JSON.stringify(myLeads)
 console.log(typeof myLeads)
 
 //string
+
+localStorage.setItem("myLeads", JSON.stringify( myLeads ) )
 ```
 
 # Truthy / Falsy Values
-These values are false. 
+
+These values are false.
+
 ```
 // false
 // 0
@@ -275,12 +284,15 @@ These values are false.
 // undefined -> how JavaScript signalizes emptiness
 // NaN
 ```
-Developers set values to null to signify emptyness. JS will return these values as undefinied. 
 
-Arrays will return true, even if empty. 
+Developers set values to null to signify emptyness. JS will return these values as undefinied.
+
+Arrays will return true, even if empty.
 
 # Function Parameters & Arguments
+
 Pass a value through a function, allows for reuseability vs. hard coding values. To add more than one, use commas
+
 ```
 const names = ["Dylan", "Karl", "Briana"]
 const age = 20
@@ -294,4 +306,3 @@ render(names, age)
 // ["Dylan", "Karl", "Briana"]
 // 20
 ```
-
