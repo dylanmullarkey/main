@@ -31,6 +31,7 @@ margin-right: auto
 # Importing Fonts
 
 ### Download font and upload ttf file to project
+
 ```
 @font-face{
     src: url(".ttf")
@@ -46,8 +47,11 @@ justify-content: (start, center, end, space-around, space-evenly, space-between)
 align-items: (start, center, end);
 flex-direction: (row, column);
 ```
-### Justify-content organizes on the (main) axis
-### Align-items organizes on the (cross) axis.
-### MAIN AXIS IS WHAT IS SET ON FLEX-DIRECTION
-#### Align-items defaults to stretch. Set height to fix or give value.
 
+### Justify-content organizes on the (main) axis
+
+### Align-items organizes on the (cross) axis.
+
+### MAIN AXIS IS WHAT IS SET ON FLEX-DIRECTION
+
+#### Align-items defaults to stretch. Set height to fix or give value.
