@@ -174,3 +174,47 @@ addButtonEl.addEventListener("click", function() {
     console.log(`${inputValue} added to database`)
 })
 ```
+
+### Turn Object into Array
+
+Using the Object keyword allows us to manipulate it.
+
+```
+let scrimbaUsers = {
+    "00": "sindre@scrimba.com",
+    "01": "per@scrimba.com",
+    "02": "frode@scrimba.com"
+}
+```
+
+Convert object to array based on values
+
+```
+Object.values(scrimbaUsers)
+// ["sindre@scrimba.com", "per@scrimba.com", "frode@scrimba.com"]
+```
+
+Convert object to array based on keys
+
+```
+Object.keys(scrimbaUsers)
+// ["sindre@scrimba.com", "per@scrimba.com", "frode@scrimba.com"]
+```
+
+Convert object to array based on entries. Creates an array of arrays
+
+```
+Object.entries(scrimbaUsers)
+// [["00", "sindre@scrimba.com"], ["01", "per@scrimba.com"], ["02", "frode@scrimba.com"]]
+```
+
+### Fetching data from Firebase using onValue
+
+Import onValue
+
+```
+onValue(reference, function(snapshot)){
+    let array = Object.values(snapshot.val())
+    console.log(array)
+}
+```
