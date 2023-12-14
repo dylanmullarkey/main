@@ -213,8 +213,71 @@ Object.entries(scrimbaUsers)
 Import onValue
 
 ```
+
+```
+
+```
 onValue(reference, function(snapshot)){
     let array = Object.values(snapshot.val())
     console.log(array)
 }
+```
+
+## CSS Flex-wrap
+
+Flex wrap allows you to "wrap" content, basically like word wrap.
+
+```
+// options: wrap, nowrap (deafult), wrap-reverse
+.thumbnails {
+    display: flex;
+    flex-wrap: wrap;
+}
+```
+
+## CSS Gap
+
+Gap is used with flexbox to create margins around each child element
+
+```
+.class{
+    gap: 20px 10px;
+    // top/bottom, left/right
+}
+```
+
+## Flex-grow
+
+Let's child items take up full space
+
+```
+.class{
+    flex-grow: 1;
+}
+```
+
+## createElement
+
+Creates an element. To do so, provide what element you would like to make. We create an li element, then set the text content. Aftwards, we appended it to a parent element.
+
+```
+let newEl = document.createElement("li")
+
+newEl.textContent = "Desired text"
+
+shoppingListEl.append(newEl)
+
+```
+
+## Removing items from Firebase
+
+First, import remove.
+
+Then, to remove anything, you need to provide the exact location in the DB.
+
+![Alt text](image.png)
+
+```
+let exactLocationInDB = ref(database, `newsStories/${ITEMID}`)
+remove(exactLocationInDB)
 ```
