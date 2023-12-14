@@ -281,3 +281,23 @@ Then, to remove anything, you need to provide the exact location in the DB.
 let exactLocationInDB = ref(database, `newsStories/${ITEMID}`)
 remove(exactLocationInDB)
 ```
+
+## Firebase -- snapshot.exists() method
+
+.exists() tests if something isn't null. We can use this to ensure deletion of all database entries. Since, if you try to delete every entry, you will also delete the snapshot and will recieve an error.
+
+```
+if (snapshot.exists()) {
+    //evaluates to true
+}
+```
+
+## CSS - user-select property
+
+Disable user from selecting elements (like highlighting them)
+
+```
+h1 {
+    user-select: none;
+}
+```
