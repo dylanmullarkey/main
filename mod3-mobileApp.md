@@ -2,6 +2,16 @@
 
 Module 3, final section -- Started 11/28/2023
 
+Finished 12/15/2023
+
+## Build a Mobile App Summary
+
+![Alt text](image-1.png)
+
+![Alt text](image-2.png)
+
+![Alt text](image-3.png)
+
 ## Connecting Firebase DB to JS file
 
 Under imports, add this line of code (in .js file)
@@ -299,5 +309,46 @@ Disable user from selecting elements (like highlighting them)
 ```
 h1 {
     user-select: none;
+}
+```
+
+## Setting the viewport
+Viewport is necessary to set the width on different screens. Add this line to the header
+```
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+```
+Here is a link that does a quick explaination:
+
+https://www.youtube.com/watch?v=SElOdK2qTpI&ab_channel=KevinPowell
+
+
+## Favicon (Faav-icon)
+1. Make sure image is square
+2. Make sure it's PNG
+3. https://favicon.io/
+4. Select PNG -> ICO
+5. Upload img
+6. Unzip file and upload to project. Paste provided HTML into head
+
+## Web manifest file
+Example of before and after formatting:
+
+### Before
+```
+{"name":"","short_name":"","icons":[{"src":"/android-chrome-192x192.png","sizes":"192x192","type":"image/png"},{"src":"/android-chrome-512x512.png","sizes":"512x512","type":"image/png"}],"theme_color":"#ffffff","background_color":"#ffffff","display":"standalone"}
+```
+
+### After
+```
+{
+    "name": "Cat App",
+    "short_name": "Cat App",
+    "icons":
+        [
+            {"src":"/android-chrome-192x192.png","sizes":"192x192","type":"image/png"},{"src":"/android-chrome-512x512.png","sizes":"512x512","type":"image/png"}
+        ],
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
+    "display": "standalone"
 }
 ```
