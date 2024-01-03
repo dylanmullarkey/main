@@ -5,14 +5,14 @@ Started 12/17/2023
 Finished 12/30/2023
 # Overview
 
-![Alt text](NFT-images/image.png)
+![Alt text](./NFT-images/image.png)
 
-![Alt text](NFT-images/image-5.png)
+![Alt text](./NFT-images/image-5.png)
 
 ## Semantic HTML
 
 Using more descriptive tags which explain the content they hold. Main ones are:
-![Alt text](NFT-images/image-1.png)
+![Alt text](./NFT-images/image-1.png)
 
 ### Why use Semantic HTML?
 
@@ -43,10 +43,10 @@ a:hover{
 
 ## Inline-block
 Block elements:
-![Alt text](NFT-images/image-2.png)
+![Alt text](./NFT-images/image-2.png)
 
 Inline Elements:
-![Alt text](NFT-images/image-3.png)
+![Alt text](./NFT-images/image-3.png)
 
 Inline-block Elements:
-![Alt text](NFT-images/image-4.png)
+![Alt text](./NFT-images/image-4.png)
