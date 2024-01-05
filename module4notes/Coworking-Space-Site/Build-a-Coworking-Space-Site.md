@@ -107,19 +107,19 @@ Add align-self:
 
 Set it to flex-start:
 
-![Alt text](iimages/mage-10.png)
+![Alt text](images/image-10.png)
 
 Set it to flex-end:
 
-![Alt text](iimages/mage-11.png)
+![Alt text](images/image-11.png)
 
 Stretch (default):
 
-![Alt text](iimages/mage-12.png)
+![Alt text](images/image-12.png)
 
 Center:
 
-![Alt text](iimages/mage-13.png)
+![Alt text](images/image-13.png)
 
 ## Position: fixed
 
@@ -140,11 +140,11 @@ margin: auto;
 ## z-index
 Resource; https://scrimba.com/learn/frontend/aside-z-index-co9d34490921adea165eec5ae
 
-![Alt text](iimages/mage-16.png)
+![Alt text](images/image-16.png)
 
 We have a stack of cards, each stacked on one another.
 
-![Alt text](iimages/mage-14.png)
+![Alt text](images/image-14.png)
 
 Creating a pseudo selector and setting z-index to 1 allows us to hover on a card and bring it to the front.
 ```
@@ -153,11 +153,11 @@ Creating a pseudo selector and setting z-index to 1 allows us to hover on a card
 }
 ```
 
-![Alt text](iimages/mage-15.png)
+![Alt text](images/image-15.png)
 
 The highest number of z-index will be at the front.
 
-![Alt text](iimages/mage-17.png)
+![Alt text](images/image-17.png)
 
 Here, King has an index of 2 while Jack has an index of 1. Numbers can be negative as well. These stacks are called <B>stacking contexts</b>
 
