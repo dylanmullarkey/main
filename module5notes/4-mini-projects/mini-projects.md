@@ -93,3 +93,152 @@ console.log(guestsArr.join(''))
 ## .map() VS .forEach()
 
 - forEach() returns undefinied. Can't chain methods on forEach since it returns undefinied.
+
+- Use .map() when you need to make use of the returned arrray
+
+- Use .forEach() if you don't need to create a new array
+
+## For loop break and continue
+Break will exit the current loop
+
+Continue skips over the current iteration
+
+```
+const expensesAndRefunds = [
+    { description: 'Groceries', amount: 50, year: 2023 },
+    { description: 'Electronics', amount: -30, year: 2023 },
+    { description: 'Dinner', amount: 40, year: 2023 },
+    { description: 'Clothing', amount: 60, year: 2023 },
+    { description: 'Entertainment', amount: 25, year: 2023 },
+    { description: 'Rent', amount: -500, year: 2024 },
+    { description: 'Utilities', amount: 100, year: 2024 },
+    { description: 'Books', amount: 20, year: 2024 },
+    { description: 'Fitness', amount: 30, year: 2024 },
+    { description: 'Gifts', amount: 15, year: 2024 },
+]
+
+let totalSpent = 0
+const cutoffDate = 2024
+
+for (let i = 0; i < expensesAndRefunds.length; i++) {
+    const currentExpenseOrRefund = expensesAndRefunds[i]
+    
+    if (currentExpenseOrRefund.year >= cutoffDate) {
+        console.log(`Reached cutoff date, exiting loop`)
+        break   
+    }
+    
+    if (currentExpenseOrRefund.amount < 0) {
+        console.log(`Skipping ${currentExpenseOrRefund.description} due to refund`)
+        continue
+    } 
+    
+    totalSpent += currentExpenseOrRefund.amount 
+}
+
+
+console.log(`Total amount spent on items in 2023: $${totalSpent}`)
+
+›Skipping Electronics due to refund
+›Reached cutoff date, exiting loop
+›Total amount spent on items in 2023: $175
+```
+
+## Dangers of .innerHTML
+Users can insert malicious JS. It's better to build the element manually
+
+```
+const newFilm = document.createElement('div')
+newFilm.classList.add('film-item')
+newFilm.textContent = filmInput.value
+filmList.innerHTML += `
+        <div class="film-item">${filmInput.value}</div>
+        `
+filmList.appendChild(newFilm)
+```
+
+## Function Expressions
+Different syntax & behvaior
+
+Function declarations are HOISTED. When code is executed, it is moved to the top. So, you can call a function before it's declared.
+
+Here is a normal function declaration:
+```
+function getSpendAlert(amount) {
+    return `Warning! You just spent £${amount}!`
+}
+console.log(getSpendAlert(100))
+```
+
+This would also work:
+```
+console.log(getSpendAlert(100))
+
+function getSpendAlert(amount) {
+    return `Warning! You just spent £${amount}!`
+}
+```
+
+### Function Expression ex.
+```
+const getSpendAlert = function(amount){
+    return `Warning! You just spent £${amount}!`
+}
+```
+
+The advantage of function expressions:
+- Are not hoisted
+- Are cleaner and easier to read (argueable)
+- Are the chosen style of some dev teams
+
+
+## Arrow functions
+Ultra concise functions
+
+```
+const getSpendAlert = function(amount){
+    return `Warning! You just spent £${amount}!`
+}
+```
+
+Basic arrow function
+```
+const getSpendAlert = (amount) => {
+    return `Warning! You just spent £${amount}!`
+} 
+```
+
+Concise arrow function (one argument)
+```
+const getSpendAlert = amount => {
+    return `Warning! You just spent £${amount}!`
+} 
+```
+Concise arrow function (two arguments)
+```
+const getSpendAlert = (name, amount) => {
+    return `Warning! Hey ${name}! You just spent £${amount}!``
+} 
+```
+No parameters:
+```
+const getSpendAlert = () => {
+    return `Warning! You just spent £${amount}!`
+} 
+```
+
+Guide:
+![Alt text](image-1.png)
+
+### Most concise
+Can get rid of {}, as well as return statement.
+```
+const getSpendAlert = amount => `Warning! You just spent £${amount}!`
+```
+
+HOWEVER, this only works with one line. If code block is more than 1 line, you need the {} 
+
+Guide:
+![Alt text](image-2.png)
+
+
