@@ -241,4 +241,38 @@ HOWEVER, this only works with one line. If code block is more than 1 line, you n
 Guide:
 ![Alt text](image-2.png)
 
+## Import and Export - Deep Dive
+We can give the imported thing a new name using as. We can also easily import several things from one file with a comma.
 
+```
+import { interplanetaryDestinationsArr as destinations, shortSpaceTripsArr } from '/data.js'
+```
+
+We dont have to export each function/data indivudally by adding export to the front of declaration. Instead, add this to the bottom of the data file:
+```
+export { interplanetaryDestinationsArr, shortSpaceTripsArr }
+```
+
+## Default Export
+We can skip some steps if we only want to export one thing.
+```
+export default function getMatchingTripsArr(){}
+```
+
+```
+import getMatchingTripsArr from '/getMatchingTripsArr.js'
+```
+
+For the import statement, we can change the function name to anything. This can be confusing. Having the filename represent the original name is helpful. Remember, we can only use this once per file.
+
+```
+(function (a, b) {
+  const chuck = 42;
+  return a + b + chuck;
+});
+
+(a,b) => {
+    const chuck = 42
+    return a + b + chuck
+}
+```
